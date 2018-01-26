@@ -1,6 +1,9 @@
 <template>
-  <v-app>
-    <v-navigation-drawer temporary v-model="sideNav">
+  <v-app id="inspire">
+    <v-navigation-drawer fixed
+      clipped
+      app
+     v-model="sideNav">
       <v-list>
         <v-list-tile
           v-for="item in menuItems"
@@ -12,7 +15,6 @@
           <v-list-tile-content>{{ item.title }}</v-list-tile-content>
         </v-list-tile>
       </v-list>
-      
     </v-navigation-drawer>
     <v-toolbar dark class="primary">
       <v-toolbar-side-icon
@@ -34,7 +36,9 @@
         </v-btn>
       </v-toolbar-items>
     </v-toolbar>
+    
       <router-view></router-view>
+      
   </v-app>
 </template>
 
